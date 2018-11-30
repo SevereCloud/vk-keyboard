@@ -1,0 +1,286 @@
+<!-- Оставь надежду всяк сюда входящий -->
+
+<div class="main">
+	<h1>Генератор клавиатуры для VK</h1>
+	
+  <p>
+		Генерирует <a href="https://vk.com/dev/bots_docs_3">клавиатуру</a> для ботов. 
+    Проверить клавиатуру можно отправив JSON <a href="https://vk.com/im?sel=-174472256">боту</a>.
+	</p>
+  <p>
+    <a href="https://github.com/severecloud/vk-keyboard">Github</a>
+  </p>
+
+  <h3>Клавиатура</h3>
+
+	<div class="buttons-main">
+		{#each keyboard.buttons as buttons, ii}
+		<div class="row">
+			<Buttons>
+				{#each buttons as button, jj}
+				<Button label="{button.action.label}" color="{button.color}" select="{i==ii&&j==jj?'1':'0'}" on:click="set({i: ii,j: jj})"
+				/> {/each}
+			</Buttons>
+			{#if keyboard.buttons[ii].length < 4} <div class="button-add" on:click="addColumn(ii)">+</div>{/if}
+    </div>
+    {/each} 
+    {#if keyboard.buttons.length < 10}<div class="button-add" on:click="addRow()">Добавить</div>{/if}
+
+    <div class="border">
+      <div class="block-item">
+        <label>Текст</label>
+        <input type="text" bind:value="keyboard.buttons[i][j].action.label">
+        {#if keyboard.buttons[i][j].action.label===""}<b class="note" style="color:#db3b3b;">Пустой текст!</b>{/if}
+        {#if keyboard.buttons[i][j].action.label.length > 41}<b class="note" style="color:#db3b3b;">Слишком много символов!</b>{/if}
+      </div>
+
+      <div class="block-item">
+        <label>Полезная нагрузка</label>
+        <input type="text" bind:value="keyboard.buttons[i][j].action.payload"> 
+        {#if !validPayload}<b class="note" style="color:#db3b3b;">Невалидный JSON!</b>{/if}
+      </div>
+
+      <div class="block-item">
+        <label>Цвет</label>
+        <Buttons>
+          {#each ["primary", "default", "negative", "positive"] as color}
+            <Button label="{keyboard.buttons[i][j].color==color?'X':''}" color="{color}" on:click="updateColor(event.color)" />
+          {/each}
+        </Buttons>
+      </div>
+
+      <div class="button-remove" on:click="removeButton()">Удалить</div>
+    </div>
+
+    <div class="one-time">
+      <input type="checkbox" bind:checked="keyboard.one_time">
+      <label>скрывать клавиатуру сразу</label>
+    </div>
+
+  </div>
+
+  {#if errorValid}
+    <h3>Ошибки</h3>
+    <pre>{errorValid}</pre>
+  {:else}
+    <Json {keyboard}/>
+  {/if}
+
+</div>
+
+<style>
+  .main {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 40px;
+    font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Helvetica, Arial,
+      sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol;
+  }
+  .border {
+    background-color: #fff;
+    border: 1px solid #d1d5da;
+    border-radius: 3px;
+    padding: 16px 16px 8px;
+    margin-bottom: 16px;
+    margin-top: 16px;
+  }
+
+  .buttons-main {
+    max-width: 492px;
+    margin: 0 auto;
+    border-radius: 3px;
+    margin-bottom: 16px;
+    margin-top: 0;
+  }
+  .buttons-main label {
+    font-weight: 600;
+    margin: 0 0 6px;
+  }
+  .note {
+    color: #586069;
+    font-size: 12px;
+    margin: 4px 0 2px;
+    min-height: 17px;
+  }
+  .block-item{
+    margin-bottom: 16px;
+  }
+
+  .one-time,
+  .row {
+    display: flex;
+    flex-direction: row;
+  }
+  
+
+  .button-add, .button-remove {
+    margin: 5px auto;
+    line-height: 38px;
+    cursor: pointer;
+    text-align: center;
+    border-radius: 4px;
+    max-width: 200px;
+    user-select: none;
+  }
+
+  .button-add{
+    color: #55677d;
+  }
+  .button-add:hover {
+    background: #dfe6ed;
+  }
+  .button-add:active {
+    background: #dae2ea;
+  }
+
+  .button-remove{
+    color: #db3b3b;
+  }
+  .button-remove:hover {
+    color: #fff;
+    background: #eb5050;
+  }
+  .button-remove:active {
+    color: #fff;
+    background: #db3b3b;
+  }
+
+  .one-time {
+    margin-bottom: 16px;
+    margin-top: 0;
+  }
+  .one-time label {
+    margin-left: 6px;
+  }
+</style>
+
+<script>
+  export default {
+    components: {
+      Button: "./components/Button.html",
+      Buttons: "./components/Buttons.html",
+      Json: "./language/Json.html",
+      // Golang: "./language/Golang.html"
+    },
+
+    computed: {
+      validPayload: ({ keyboard, i, j }) => {
+        let isObject = data => data instanceof Object && !Array.isArray(data);
+        let p = keyboard.buttons[i][j].action.payload;
+        let a;
+        try {
+          a = JSON.parse(p);
+        } catch (e) {
+          return false;
+        }
+        return isObject(a) && Object.keys(a).length != 0 && p.length < 256;
+      },
+      errorValid: ({ keyboard }) => {
+        let text = ""
+
+        for (let i = 0; i < keyboard.buttons.length; i++) {
+          const buttons = keyboard.buttons[i];
+          for (let j = 0; j < buttons.length; j++) {
+            const button = buttons[j];
+
+            if (button.action.label == "") {
+              text += `${i+1}:${j+1} пустой текст\n`;
+            }
+            if (button.action.label.length > 41) {
+              text += `${i+1}:${j+1} больше 40 символов в тексте\n`;
+            }
+            
+            let isObject = data => data instanceof Object && !Array.isArray(data);
+            let p = button.action.payload;
+            let a;
+            try {
+              a = JSON.parse(p);
+              if (!isObject(a)){
+                text += `${i+1}:${j+1} требуется объект в json вида {"button": 1}\n`;
+              }
+              if (Object.keys(a).length == 0){
+                text += `${i+1}:${j+1} пустой объект в json\n`;
+              }
+              if (p.length > 255){
+                text += `${i+1}:${j+1} больше 255 символов в json\n`;
+              }
+            } catch (e) {
+              text += `${i+1}:${j+1} невалидный json\n`;
+            }
+          }
+        }
+
+        return text;
+      }
+    },
+
+    methods: {
+      updateColor(color) {
+        const { keyboard, i, j } = this.get();
+
+        keyboard.buttons[i][j].color = color;
+
+        this.set({ keyboard });
+      },
+      addRow() {
+        const { keyboard, i, j } = this.get();
+
+        let len = keyboard.buttons.length;
+        if (len < 10) {
+          keyboard.buttons[len] = [
+            {
+              action: {
+                type: "text",
+                payload: '{"button": "1"}',
+                label: "Label"
+              },
+              color: "default"
+            }
+          ];
+        }
+
+        this.set({ keyboard, i: len, j: 0 });
+      },
+      addColumn(ii) {
+        const { keyboard, i, j } = this.get();
+
+        let len = keyboard.buttons[ii].length;
+        if (len < 4) {
+          keyboard.buttons[ii][len] = {
+            action: {
+              type: "text",
+              payload: '{"button": "1"}',
+              label: "Label"
+            },
+            color: "default"
+          };
+        }
+
+        this.set({ keyboard, i: ii, j: len });
+      },
+      removeButton() {
+        const { keyboard, i, j } = this.get();
+        let ii = i;
+        let jj = j;
+
+        let lenr = keyboard.buttons.length;
+        let lenc = keyboard.buttons[0].length;
+        console.log(lenr, lenc);
+        if (lenr > 1 || lenc > 1) {
+          keyboard.buttons[i].splice(j, 1);
+          if (keyboard.buttons[i].length == 0) {
+            keyboard.buttons.splice(i, 1);
+            if (i > 0) {
+              ii = i - 1;
+            }
+            jj = keyboard.buttons[ii].length - 1;
+          } else if (j > 0) {
+            jj = j - 1;
+          }
+        }
+
+        this.set({ keyboard, i: ii, j: jj });
+      }
+    }
+  };
+</script>

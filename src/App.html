@@ -8,7 +8,7 @@
     Проверить клавиатуру можно отправив JSON <a href="https://vk.com/im?sel=-174472256">боту</a>.
 	</p>
   <p>
-    <a href="https://github.com/severecloud/vk-keyboard">Github</a>
+    <a href="https://github.com/severecloud/vk-keyboard">GitHub</a>
   </p>
 
   <h3>Клавиатура</h3>
@@ -63,12 +63,31 @@
     <h3>Ошибки</h3>
     <pre>{errorValid}</pre>
   {:else}
-    <Json {keyboard}/>
+    <select class="header" bind:value='select'>
+      <option value="JSON">JSON</option>
+      <option value="Golang">Golang</option>
+    </select>
+
+    {#if select=="JSON"}
+      <Json {keyboard}/>
+    {:elseif select=="Golang"}
+      <Golang {keyboard}/>
+    {/if}
   {/if}
 
 </div>
 
 <style>
+  .header{
+    font-size: 1.25em;
+    font-weight: 600;
+    line-height: 1.25;
+    border: none;
+    background: none;
+    padding: 0;
+    margin: 24px 0 16px;
+    color: #333;
+  }
   .main {
     max-width: 1000px;
     margin: 0 auto;
@@ -160,7 +179,7 @@
       Button: "./components/Button.html",
       Buttons: "./components/Buttons.html",
       Json: "./language/Json.html",
-      // Golang: "./language/Golang.html"
+      Golang: "./language/Golang.html"
     },
 
     computed: {
@@ -209,7 +228,7 @@
             }
           }
         }
-
+        localStorage.setItem('keyboard', JSON.stringify(keyboard));
         return text;
       }
     },

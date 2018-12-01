@@ -1,5 +1,84 @@
-<h3>Golang</h3>
-
 <pre>
-    GOLANG
+  {code}
 </pre>
+
+<script>
+  function golang(keyboard) {
+    let security = (str) => str.replace(/"/g,`\\"`)
+    let text = ""
+
+    text += `// import "encoding/json"\n`
+    text += `
+// Структуры
+
+type keyboardButtonAction struct {
+	Label   string \`json:"label,omitempty"\`
+	Payload string \`json:"payload,omitempty"\`
+	Type    string \`json:"type"\`
+}
+
+type keyboardButton struct {
+	Action keyboardButtonAction \`json:"action"\`
+	Color  string               \`json:"color"\`
+}
+
+type keyboardRow []keyboardButton
+
+type keyboard struct {
+	Buttons []keyboardRow \`json:"buttons"\`
+	OneTime bool          \`json:"one_time"\`
+}
+
+// Основной код
+
+var buttons []keyboardRow
+var button keyboardButton
+var buttonAction keyboardButtonAction
+
+
+`
+    console.log(keyboard)
+    for (let i = 0; i < keyboard.buttons.length; i++) {
+      const row = keyboard.buttons[i];
+      
+      text += `var row${i} []keyboardButton
+`
+      row.forEach(button => {
+        text += `
+buttonAction = keyboardButtonAction{
+	Label:   "${button.action.label.replace(/"/g,`\\"`)}",
+	Payload: "${button.action.payload.replace(/"/g,`\\"`)}",
+	Type:    "${button.action.type.replace(/"/g,`\\"`)}",
+}
+button = keyboardButton{
+	Action: buttonAction,
+	Color:  "${button.color}",
+}
+
+row${i} = append(row${i}, button)
+`
+      });
+      text += `buttons = append(buttons, row${i})
+`
+    }
+
+    text += `
+kb := keyboard{
+	Buttons: buttons,
+	OneTime: ${keyboard.one_time},
+}
+
+byteJSON, _ := json.Marshal(kb)
+keyboardJSON := string(byteJSON)
+
+// fmt.Print(keyboardJSON)`
+
+    return text
+  }
+  
+  export default {
+	  computed: {
+      code: ({ keyboard }) => golang(keyboard)
+	  }
+	}
+</script>

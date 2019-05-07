@@ -46,9 +46,9 @@ var buttonAction keyboardButtonAction
       row.forEach(button => {
         text += `
 buttonAction = keyboardButtonAction{
-	Label:   "${button.action.label.replace(/"/g,`\\"`)}",
-	Payload: "${button.action.payload.replace(/"/g,`\\"`)}",
-	Type:    "${button.action.type.replace(/"/g,`\\"`)}",
+	Label:   "${button.action.label.replace(/\\/g,"\\\\").replace(/"/g,`\\"`)}\",
+	Payload: "${button.action.payload.replace(/\\/g,"\\\\").replace(/"/g,`\\"`)}",
+	Type:    "${button.action.type}",
 }
 button = keyboardButton{
 	Action: buttonAction,

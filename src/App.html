@@ -66,12 +66,15 @@
     <select class="header" bind:value='select'>
       <option value="JSON">JSON</option>
       <option value="Golang">Golang</option>
+      <option value="Golang-vksdk">Golang vksdk</option>
     </select>
 
     {#if select=="JSON"}
       <Json {keyboard}/>
     {:elseif select=="Golang"}
       <Golang {keyboard}/>
+    {:elseif select=="Golang-vksdk"}
+      <Golang_vksdk {keyboard}/>
     {/if}
   {/if}
 
@@ -179,7 +182,8 @@
       Button: "./components/Button.html",
       Buttons: "./components/Buttons.html",
       Json: "./language/Json.html",
-      Golang: "./language/Golang.html"
+      Golang: "./language/Golang.html",
+      Golang_vksdk: "./language/Golang-vksdk.html"
     },
 
     computed: {

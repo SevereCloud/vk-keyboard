@@ -1,0 +1,46 @@
+<pre>
+  {code}
+</pre>
+
+<script>
+  function golang(keyboard) {
+    let security = (str) => str.replace(/"/g,`\\"`)
+    let text = ""
+
+    text += `// import "encoding/json"\n`
+    text += `
+// Код для github.com/SevereCloud/vksdk
+
+var kb object.MessagesKeyboard
+
+
+`
+    console.log(keyboard)
+    for (let i = 0; i < keyboard.buttons.length; i++) {
+      const row = keyboard.buttons[i];
+      
+      text += `\nkb.AddRow()\n`
+      row.forEach(button => {
+        text += `kb.AddButton(`+ 
+`"${button.action.label.replace(/\\/g,"\\\\").replace(/"/g,`\\"`)}\", ` +
+`"${button.action.payload.replace(/\\/g,"\\\\").replace(/"/g,`\\"`)}", ` +
+`"${button.color}"` +
+`)\n`
+      });
+    }
+
+    text += `
+byteJSON, _ := json.Marshal(kb)
+keyboardJSON := string(byteJSON)
+
+// fmt.Print(keyboardJSON)`
+
+    return text
+  }
+  
+  export default {
+	  computed: {
+      code: ({ keyboard }) => golang(keyboard)
+	  }
+	}
+</script>

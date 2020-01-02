@@ -40,30 +40,33 @@
 <style>
   .button {
     display: flex;
-    /* flex: 1; */
-    flex-grow: 1;
-    flex-shrink: 1;
+    align-items:center;
+    justify-content: center;
+    flex: 1;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    vertical-align: middle;
     width: 100%;
     height: 38px;
     margin: 5px;
-    border-radius: 4px;
+    border-radius: 6px;
     cursor: pointer;
     font-family: -apple-system,BlinkMacSystemFont,Roboto,Open Sans,Helvetica Neue,Noto Sans Armenian,Noto Sans Bengali,Noto Sans Cherokee,Noto Sans Devanagari,Noto Sans Ethiopic,Noto Sans Georgian,Noto Sans Hebrew,Noto Sans Kannada,Noto Sans Khmer,Noto Sans Lao,Noto Sans Osmanya,Noto Sans Tamil,Noto Sans Telugu,Noto Sans Thai,sans-serif;
     font-size: 13px;
     font-weight: 300;
+    padding: 0 12px;
   }
   .button span {
-    display: inline-flex;
-    /* display: inline-block; */
+    display: inline-block;
     align-items: center;
     overflow: hidden;
     white-space: nowrap;
     text-overflow: ellipsis;
     vertical-align: middle;
-    padding: 7px 16px 8px;
-    margin: auto;
+    
   }
-  .button span svg {
+  .button svg {
     height: 24px;
     margin: 0 4px 0 2px;
   }
@@ -130,7 +133,7 @@
 </style>
 
 <div class="button {background(type, color)}" class:bold class:select on:click={() => dispatch("click")} >
-  <span>
+  
     {#if type == 'location'}
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
         <path
@@ -144,9 +147,9 @@
           d="M14.5,19h3A1.5,1.5,0,0,0,19,17.5v-3A1.5,1.5,0,0,0,17.5,13h-3A1.5,1.5,0,0,0,13,14.5v3A1.5,1.5,0,0,0,14.5,19ZM11,17.5v-3A1.5,1.5,0,0,0,9.5,13h-3A1.5,1.5,0,0,0,5,14.5v3A1.5,1.5,0,0,0,6.5,19h3A1.5,1.5,0,0,0,11,17.5ZM6.5,11h3A1.5,1.5,0,0,0,11,9.5v-3A1.5,1.5,0,0,0,9.5,5h-3A1.5,1.5,0,0,0,5,6.5v3A1.5,1.5,0,0,0,6.5,11Zm6.32-1.94,2.12,2.12a1.49,1.49,0,0,0,2.12,0l2.12-2.12a1.49,1.49,0,0,0,0-2.12L17.06,4.82a1.49,1.49,0,0,0-2.12,0L12.82,6.94A1.49,1.49,0,0,0,12.82,9.06Z" />
       </svg>
     {/if}
-
+  <span>
     {text(type, label)}
-
+  </span>
     {#if type == 'vkpay'}
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 52 24">
         <path
@@ -260,5 +263,5 @@
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path fill="none" stroke-linecap="round" stroke-width="1.7" stroke-linejoin="round" stroke="#528bcc" d="M6 4h6v6m-1-5l-6 6"/></svg>
     {/if}
 
-  </span>
+  
 </div>

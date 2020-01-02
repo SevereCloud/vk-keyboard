@@ -182,7 +182,7 @@
 
     <div class="border">
       <div class="block-item">
-        <label>Тип клавиши</label>
+        <label>Тип кнопки</label>
 
         <Buttons>
           <Button

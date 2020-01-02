@@ -1,9 +1,7 @@
-<pre>
-  {code}
-</pre>
-
 <script>
-  function golang(keyboard) {
+  export let keyboard;
+
+  let golang = keyboard => {
     let security = (str) => str.replace(/"/g,`\\"`)
     let text = ""
 
@@ -75,10 +73,8 @@ keyboardJSON := string(byteJSON)
 
     return text
   }
-  
-  export default {
-	  computed: {
-      code: ({ keyboard }) => golang(keyboard)
-	  }
-	}
 </script>
+
+<pre>
+  {golang(keyboard)}
+</pre>

@@ -420,19 +420,19 @@ export class Keyboard extends WritableClass {
         // OPEN_APP => 2,
         // OPEN_LINK => 2
 
-        if (typeStat.dict[ButtonType.VKPay] > 1) {
+        if (typeStat.dict[ButtonType.VKPay] && row.length > 1 ) {
           error += `the row ${i} with button of type vkpay can contain only 1 button(s)\n`
         }
 
-        if (typeStat.dict[ButtonType.Location] > 2) {
+        if (typeStat.dict[ButtonType.Location] && row.length > 2) {
           error += `the row ${i} with button of type location can contain only 2 button(s)\n`
         }
 
-        if (typeStat.dict[ButtonType.VKApps] > 2) {
+        if (typeStat.dict[ButtonType.VKApps] && row.length > 2) {
           error += `the row ${i} with button of type open_app can contain only 2 button(s)\n`
         }
 
-        if (typeStat.dict[ButtonType.OpenLink] > 2) {
+        if (typeStat.dict[ButtonType.OpenLink] && row.length > 2) {
           error += `the row ${i} with button of type open_link can contain only 2 button(s)\n`
         }
 

@@ -1,6 +1,12 @@
 <script>
+  import Highlight from 'svelte-highlight';
+  import { json } from 'svelte-highlight/languages';
+  import 'svelte-highlight/styles/github.css';
+
   export let JSONminify = false;
   export let keyboard;
+
+   $: code = JSON.stringify(keyboard, "", JSONminify?0:2);
 </script>
 
 <style>
@@ -20,9 +26,4 @@
 	<label>JSON minify</label>
 </div>
 
-<pre>
-{JSON.stringify(keyboard, "", JSONminify?0:2)}
-</pre>
-
-
-	
+<Highlight language={json} {code}/>

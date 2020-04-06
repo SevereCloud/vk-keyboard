@@ -5,7 +5,8 @@
 ## Поддерживаеммые языки
 
 - JSON
-- Golang
+- [VK SDK](https://github.com/SevereCloud/vksdk) (Golang)
+- [VK-IO](https://github.com/negezor/vk-io/blob/master/docs/ru/api-reference/buttons/keyboard.md) (Node.js)
 
 ## Запустить локально
 

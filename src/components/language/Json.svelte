@@ -3,8 +3,10 @@
   import { json } from 'svelte-highlight/languages';
   import 'svelte-highlight/styles/github.css';
 
+  import { Keyboard } from "../../lib/keyboard";
+
   export let JSONminify = false;
-  export let keyboard;
+  export let keyboard = new Keyboard();
 
    $: code = JSON.stringify(keyboard, "", JSONminify?0:2);
 </script>

@@ -187,23 +187,23 @@
         <Buttons>
           <Button
             label="Text"
-            color={$keyboard.buttons[i][j].action.type === ButtonType.Text ? 'primary' : 'secondary'}
+            color={$keyboard.buttons[i][j].action.type === ButtonType.Text ? Color.Primary : Color.Secondary}
             on:click={() => $keyboard.buttons[i][j].toText()} />
           <Button
             label="Open Link"
-            color={$keyboard.buttons[i][j].action.type === ButtonType.OpenLink ? 'primary' : 'secondary'}
+            color={$keyboard.buttons[i][j].action.type === ButtonType.OpenLink ? Color.Primary : Color.Secondary}
             on:click={() => $keyboard.buttons[i][j].toOpenLink()} />
           <Button
             label="Location"
-            color={$keyboard.buttons[i][j].action.type === ButtonType.Location ? 'primary' : 'secondary'}
+            color={$keyboard.buttons[i][j].action.type === ButtonType.Location ? Color.Primary : Color.Secondary}
             on:click={() => $keyboard.buttons[i][j].toLocation()} />
           <Button
             label="VK Pay"
-            color={$keyboard.buttons[i][j].action.type === ButtonType.VKPay ? 'primary' : 'secondary'}
+            color={$keyboard.buttons[i][j].action.type === ButtonType.VKPay ? Color.Primary : Color.Secondary}
             on:click={() => $keyboard.buttons[i][j].toVKPay()} />
           <Button
             label="VK Apps"
-            color={$keyboard.buttons[i][j].action.type === ButtonType.VKApps ? 'primary' : 'secondary'}
+            color={$keyboard.buttons[i][j].action.type === ButtonType.VKApps ? Color.Primary : Color.Secondary}
             on:click={() => $keyboard.buttons[i][j].toVKApps()} />
         </Buttons>
       </div>
@@ -277,7 +277,7 @@
         <div class="block-item">
           <label>Цвет</label>
           <Buttons>
-            {#each ['primary', 'secondary', 'negative', 'positive'] as color}
+            {#each [Color.Primary, Color.Secondary, Color.Negative, Color.Positive] as color}
               <Button
                 label={$keyboard.buttons[i][j].color === color ? 'X' : ''}
                 {color}
@@ -296,11 +296,11 @@
         <Button
           label="Клавиатура"
           on:click={() => keyboard.toKeyboard()}
-          color={$keyboard.inline !== true ? 'primary' : 'secondary'} />
+          color={$keyboard.inline !== true ? Color.Primary : Color.Secondary} />
         <Button
           label="Инлайн клавиатура"
           on:click={() => keyboard.toInlineKeyboard()}
-          color={$keyboard.inline === true ? 'primary' : 'secondary'} />
+          color={$keyboard.inline === true ? Color.Primary : Color.Secondary} />
       </Buttons>
     </div>
     {#if $keyboard.inline !== true}

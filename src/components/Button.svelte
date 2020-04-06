@@ -1,5 +1,6 @@
 <script>
   import { createEventDispatcher } from "svelte";
+  import { ButtonType, Color } from "../lib/keyboard";
   
   const dispatch = createEventDispatcher();
 
@@ -10,9 +11,9 @@
 
   let text = (type, label) => {
     switch (type) {
-      case "location":
+      case ButtonType.Location:
         return "Отправить своё местоположение";
-      case "vkpay":
+      case ButtonType.VKPay:
         return "Оплатить через";
       default:
         return label;
@@ -21,20 +22,20 @@
 
   let background = (type, color) => {
     switch (type) {
-      case "location":
-        return "secondary";
-      case "vkpay":
-        return "primary";
-      case "open_app":
-        return "secondary";
-      case "open_link":
-        return "secondary";
+      case ButtonType.Location:
+        return Color.Secondary;
+      case ButtonType.VKPay:
+        return Color.Primary;
+      case ButtonType.VKApps:
+        return Color.Secondary;
+      case ButtonType.OpenLink:
+        return Color.Secondary;
       default:
-        return color == "" ? "primary" : color;
+        return color == "" ? Color.Primary : color;
     }
   };
   let bold=false;
-  $: bold = type=="text"? false : true;
+  $: bold = type==ButtonType.Text? false : true;
 </script>
 
 <style>
@@ -64,8 +65,8 @@
     white-space: nowrap;
     text-overflow: ellipsis;
     vertical-align: middle;
-    
   }
+
   .button svg {
     height: 24px;
     margin: 0 4px 0 2px;
@@ -134,14 +135,14 @@
 
 <div class="button {background(type, color)}" class:bold class:select on:click={() => dispatch("click")} >
   
-    {#if type == 'location'}
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+    {#if type == ButtonType.Location}
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" style="height: 24px; width: 24px;">
         <path
           fill="#528bcc"
           d="M6,10q0,3.27,5,9.14h0a1.29,1.29,0,0,0,1.82.14l.14-.14q5-5.88,5-9.14a5.78,5.78,0,0,0-6-6A5.78,5.78,0,0,0,6,10Zm4,0a2,2,0,1,1,2,2A2,2,0,0,1,10,10Z" />
       </svg>
-    {:else if type == 'open_app'}
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+    {:else if type == ButtonType.VKApps}
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" style="height: 24px; width: 24px;">
         <path
           fill="#528bcc"
           d="M14.5,19h3A1.5,1.5,0,0,0,19,17.5v-3A1.5,1.5,0,0,0,17.5,13h-3A1.5,1.5,0,0,0,13,14.5v3A1.5,1.5,0,0,0,14.5,19ZM11,17.5v-3A1.5,1.5,0,0,0,9.5,13h-3A1.5,1.5,0,0,0,5,14.5v3A1.5,1.5,0,0,0,6.5,19h3A1.5,1.5,0,0,0,11,17.5ZM6.5,11h3A1.5,1.5,0,0,0,11,9.5v-3A1.5,1.5,0,0,0,9.5,5h-3A1.5,1.5,0,0,0,5,6.5v3A1.5,1.5,0,0,0,6.5,11Zm6.32-1.94,2.12,2.12a1.49,1.49,0,0,0,2.12,0l2.12-2.12a1.49,1.49,0,0,0,0-2.12L17.06,4.82a1.49,1.49,0,0,0-2.12,0L12.82,6.94A1.49,1.49,0,0,0,12.82,9.06Z" />
@@ -150,8 +151,8 @@
   <span>
     {text(type, label)}
   </span>
-    {#if type == 'vkpay'}
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 52 24">
+    {#if type == ButtonType.VKPay}
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 52 24" style="height: 24px; width: 54px;">
         <path
           fill="#FFFFFF"
           fill-rule="evenodd"
@@ -259,8 +260,8 @@
       </svg>
     {/if}
 
-    {#if type == 'open_link'}
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path fill="none" stroke-linecap="round" stroke-width="1.7" stroke-linejoin="round" stroke="#528bcc" d="M6 4h6v6m-1-5l-6 6"/></svg>
+    {#if type == ButtonType.OpenLink}
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" style="height: 16px; width: 16px;"><path fill="none" stroke-linecap="round" stroke-width="1.7" stroke-linejoin="round" stroke="#528bcc" d="M6 4h6v6m-1-5l-6 6"/></svg>
     {/if}
 
   

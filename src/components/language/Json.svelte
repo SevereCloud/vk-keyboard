@@ -1,14 +1,11 @@
 <script>
-  import Highlight from 'svelte-highlight';
-  import { json } from 'svelte-highlight/languages';
-  import 'svelte-highlight/styles/github.css';
-
   import { Keyboard } from "../../lib/keyboard";
 
+  export let code = "";
   export let JSONminify = false;
   export let keyboard = new Keyboard();
 
-   $: code = JSON.stringify(keyboard, "", JSONminify?0:2);
+  $: code = JSON.stringify(keyboard, "", JSONminify?0:2);
 </script>
 
 <style>
@@ -27,5 +24,3 @@
 	<input type="checkbox" bind:checked={JSONminify}>
 	<label>JSON minify</label>
 </div>
-
-<Highlight language={json} {code}/>

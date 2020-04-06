@@ -1,9 +1,22 @@
 <script>
+  import Highlight from 'svelte-highlight';
+  import { json, go } from 'svelte-highlight/languages';
+  import 'svelte-highlight/styles/github.css';
+
   import Json from './language/Json.svelte'
-  // import Golang from './language/Golang.svelte'
+  import Golang from './language/Golang.svelte'
+
+  export let keyboard;
 
   let select_export;
-  export let keyboard;
+  let code = "a"
+
+  const listLanguage = {
+    "JSON": json,
+    "Golang": go
+  }
+
+  $: languages = listLanguage[select_export]
 </script>
 
 <style>
@@ -19,13 +32,17 @@
   }
 </style>
 
-<select class="header" bind:value={select_export}>
-  <option value="JSON">JSON</option>
-  <!-- <option value="Golang">Golang</option> -->
-</select>
+<div>
+  <select class="header" bind:value={select_export}>
+    <option value="JSON">JSON</option>
+    <option value="Golang">Golang</option>
+  </select>
 
-{#if select_export == 'JSON'}
-  <Json {keyboard} />
-<!-- {:else if select_export == 'Golang'}
-  <Golang {keyboard} /> -->
-{/if}
+  {#if select_export == 'JSON'}
+    <Json {keyboard} bind:code/>
+  {:else if select_export == 'Golang'}
+    <Golang {keyboard} bind:code/>
+  {/if}
+
+  <Highlight language={languages} {code}/>
+</div>

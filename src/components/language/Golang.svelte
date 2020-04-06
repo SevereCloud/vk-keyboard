@@ -1,80 +1,13 @@
 <script>
-  export let keyboard;
+  import { Keyboard } from "../../lib/keyboard";
+  import { toGolang } from "../../lib/golang";
 
-  let golang = keyboard => {
-    let security = (str) => str.replace(/"/g,`\\"`)
-    let text = ""
+  export let keyboard = new Keyboard();
+  export let code = "";
 
-    text += `// import "encoding/json"\n`
-    text += `
-// Структуры
-
-type keyboardButtonAction struct {
-	Label   string \`json:"label,omitempty"\`
-	Payload string \`json:"payload,omitempty"\`
-	Type    string \`json:"type"\`
-}
-
-type keyboardButton struct {
-	Action keyboardButtonAction \`json:"action"\`
-	Color  string               \`json:"color"\`
-}
-
-type keyboardRow []keyboardButton
-
-type keyboard struct {
-	Buttons []keyboardRow \`json:"buttons"\`
-	OneTime bool          \`json:"one_time"\`
-}
-
-// Основной код
-
-var buttons []keyboardRow
-var button keyboardButton
-var buttonAction keyboardButtonAction
-
-
-`
-    console.log(keyboard)
-    for (let i = 0; i < keyboard.buttons.length; i++) {
-      const row = keyboard.buttons[i];
-      
-      text += `var row${i} []keyboardButton
-`
-      row.forEach(button => {
-        text += `
-buttonAction = keyboardButtonAction{
-	Label:   "${button.action.label.replace(/\\/g,"\\\\").replace(/"/g,`\\"`)}\",
-	Payload: "${button.action.payload.replace(/\\/g,"\\\\").replace(/"/g,`\\"`)}",
-	Type:    "${button.action.type}",
-}
-button = keyboardButton{
-	Action: buttonAction,
-	Color:  "${button.color}",
-}
-
-row${i} = append(row${i}, button)
-`
-      });
-      text += `buttons = append(buttons, row${i})
-`
-    }
-
-    text += `
-kb := keyboard{
-	Buttons: buttons,
-	OneTime: ${keyboard.one_time},
-}
-
-byteJSON, _ := json.Marshal(kb)
-keyboardJSON := string(byteJSON)
-
-// fmt.Print(keyboardJSON)`
-
-    return text
-  }
+  $: code = toGolang(keyboard);
 </script>
 
-<pre>
-  {golang(keyboard)}
-</pre>
+<div>
+  Для модуля <a href="https://github.com/SevereCloud/vksdk">github.com/SevereCloud/vksdk</a>
+</div>

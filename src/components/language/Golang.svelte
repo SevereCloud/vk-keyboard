@@ -1,11 +1,11 @@
 <script>
   import { Keyboard } from "../../lib/keyboard";
-  import { toGolang } from "../../lib/golang";
+  import { Generate } from "../../lib/golang";
 
   export let keyboard = new Keyboard();
   export let code = "";
 
-  $: code = toGolang(keyboard);
+  $: code = Generate(keyboard);
 </script>
 
 <div>

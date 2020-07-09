@@ -197,6 +197,8 @@
             label="Location"
             color={$keyboard.buttons[i][j].action.type === ButtonType.Location ? Color.Primary : Color.Secondary}
             on:click={() => $keyboard.buttons[i][j].toLocation()} />
+        </Buttons>
+        <Buttons>
           <Button
             label="VK Pay"
             color={$keyboard.buttons[i][j].action.type === ButtonType.VKPay ? Color.Primary : Color.Secondary}
@@ -205,10 +207,14 @@
             label="VK Apps"
             color={$keyboard.buttons[i][j].action.type === ButtonType.VKApps ? Color.Primary : Color.Secondary}
             on:click={() => $keyboard.buttons[i][j].toVKApps()} />
+          <Button
+            label="Callback"
+            color={$keyboard.buttons[i][j].action.type === ButtonType.Callback ? Color.Primary : Color.Secondary}
+            on:click={() => $keyboard.buttons[i][j].toCallback()} />
         </Buttons>
       </div>
 
-      {#if [ButtonType.Text, ButtonType.VKApps, ButtonType.OpenLink].includes($keyboard.buttons[i][j].action.type)}
+      {#if [ButtonType.Text, ButtonType.VKApps, ButtonType.OpenLink, ButtonType.Callback].includes($keyboard.buttons[i][j].action.type)}
         <div class="block-item">
           <label>Текст</label>
           <input

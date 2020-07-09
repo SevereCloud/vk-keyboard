@@ -30,12 +30,14 @@
         return Color.Secondary;
       case ButtonType.OpenLink:
         return Color.Secondary;
+      case ButtonType.Callback:
+        return Color.Secondary;
       default:
         return color == "" ? Color.Primary : color;
     }
   };
   let bold=false;
-  $: bold = type==ButtonType.Text? false : true;
+  $: bold = type==ButtonType.Text || type==ButtonType.Callback? false : true;
 </script>
 
 <style>

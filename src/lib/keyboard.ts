@@ -65,7 +65,8 @@ export enum ButtonType {
   OpenLink = 'open_link',
   Location = 'location',
   VKPay = 'vkpay',
-  VKApps = 'open_app'
+  VKApps = 'open_app',
+  Callback = 'callback'
 }
 
 
@@ -229,6 +230,28 @@ export class ButtonActionVKApps implements ButtonAction {
   }
 }
 
+
+export class ButtonActionCallback implements ButtonAction {
+  readonly type = ButtonType.Callback;
+  label: string;
+  payload: string;
+
+  constructor() {
+    this.label = "label";
+    this.payload = "";
+  }
+
+  /** проверка структуры */
+  check(): Array<string> {
+    const error: Array<string> = [];
+
+    error.push(...checkLabel(this.label))
+    error.push(...checkPayload(this.payload))
+
+    return error
+  }
+}
+
 /**
  * Класс объекта cтруктуры buttons
  */
@@ -270,6 +293,12 @@ export class Button extends WritableClass {
 
   toVKApps(): void {
     this.action = new ButtonActionVKApps();
+    this.color = undefined;
+    this._notifyAll()
+  }
+
+  toCallback(): void {
+    this.action = new ButtonActionCallback();
     this.color = undefined;
     this._notifyAll()
   }

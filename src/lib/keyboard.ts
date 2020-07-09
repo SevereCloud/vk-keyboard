@@ -269,7 +269,9 @@ export class Button extends WritableClass {
 
   toText(): void {
     this.action = new ButtonActionText();
-    this.color = Color.Primary;
+    if (!this.color) {
+      this.color = Color.Primary;
+    }
     this._notifyAll()
   }
 
@@ -299,7 +301,9 @@ export class Button extends WritableClass {
 
   toCallback(): void {
     this.action = new ButtonActionCallback();
-    this.color = undefined;
+    if (!this.color) {
+      this.color = Color.Primary;
+    }
     this._notifyAll()
   }
 

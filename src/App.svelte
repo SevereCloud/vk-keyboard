@@ -279,7 +279,7 @@
         {/each}
       </div>
 
-      {#if $keyboard.buttons[i][j].action.type === ButtonType.Text}
+      {#if [ButtonType.Text, ButtonType.Callback].includes($keyboard.buttons[i][j].action.type)}
         <div class="block-item">
           <label>Цвет</label>
           <Buttons>

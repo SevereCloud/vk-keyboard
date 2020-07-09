@@ -70,7 +70,7 @@ export enum ButtonType {
 }
 
 
-/** цвет кнопки. Параметр используется только для кнопок с **type**: _text_ */
+/** цвет кнопки. Параметр используется только для кнопок с **type**: _text_ и _callback_ */
 export enum Color {
   /** primary — синяя кнопка, обозначает основное действие. #5181B8 */
   Primary = 'primary',
@@ -258,7 +258,7 @@ export class ButtonActionCallback implements ButtonAction {
 export class Button extends WritableClass {
   /** объект, описывающий тип действия и его параметры. Поля объекта зависят от значения параметра **type** */
   action: ButtonAction;
-  /** цвет кнопки. Параметр используется только для кнопок с **type**: _text_ */
+  /** цвет кнопки. Параметр используется только для кнопок с **type**: _text_ и _callback_ */
   color?: Color;
 
   constructor() {

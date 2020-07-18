@@ -2,7 +2,7 @@ import { Stat, WritableClass } from "./helper";
 
 
 /**
- * проверяет валидость поля label
+ * проверяет валидность поля label
  * @param label  текст кнопки
  */
 export function checkLabel(label: string): Array<string> {
@@ -25,7 +25,7 @@ export function checkLabel(label: string): Array<string> {
 }
 
 /**
- * проверяет валидость поля payload
+ * проверяет валидность поля payload
  * @param payload дополнительная информация.
  */
 export function checkPayload(payload: string): Array<string> {
@@ -55,7 +55,7 @@ interface KeyboardJSON {
   inline?: boolean;
 }
 
-interface ButtonJSON  {
+interface ButtonJSON {
   action: ButtonAction;
   color?: Color;
 }
@@ -100,9 +100,9 @@ export class ButtonActionText implements ButtonAction {
   label: string;
   payload: string;
 
-  constructor() {
-    this.label = "label";
-    this.payload = "";
+  constructor(button?: ButtonAction) {
+    this.label = button && button.label ? button.label : "label";
+    this.payload = button && button.payload ? button.payload : "";
   }
 
   /** проверка структуры */
@@ -122,10 +122,10 @@ export class ButtonActionOpenLink implements ButtonAction {
   label: string;
   payload: string;
 
-  constructor() {
-    this.link = "https://vk.com";
-    this.label = "label";
-    this.payload = "";
+  constructor(button?: ButtonAction) {
+    this.link = button && button.link ? button.link : "https://vk.com";
+    this.label = button && button.label ? button.label : "label";
+    this.payload = button && button.payload ? button.payload : "";
   }
 
   /** проверка структуры */
@@ -153,8 +153,8 @@ export class ButtonActionLocation implements ButtonAction {
   readonly type = ButtonType.Location;
   payload: string;
 
-  constructor() {
-    this.payload = "";
+  constructor(button?: ButtonAction) {
+    this.payload = button && button.payload ? button.payload : "";
   }
 
   /** проверка структуры */
@@ -173,9 +173,9 @@ export class ButtonActionVKPay implements ButtonAction {
   payload: string;
   hash: string;
 
-  constructor() {
-    this.payload = "";
-    this.hash = "";
+  constructor(button?: ButtonAction) {
+    this.payload = button && button.payload ? button.payload : "";
+    this.hash = button && button.hash ? button.hash : "";
   }
 
   /** проверка структуры */
@@ -197,14 +197,14 @@ export class ButtonActionVKApps implements ButtonAction {
   label: string;
   hash: string;
 
-  constructor() {
+  constructor(button?: ButtonAction) {
     // eslint-disable-next-line @typescript-eslint/camelcase
-    this.app_id = 0;
+    this.app_id = button && button.app_id ? button.app_id : 0;
     // eslint-disable-next-line @typescript-eslint/camelcase
-    this.owner_id = 0;
-    this.payload = "";
-    this.label = "label";
-    this.hash = "";
+    this.owner_id = button && button.owner_id ? button.owner_id : 0;
+    this.payload = button && button.payload ? button.payload : "";
+    this.label = button && button.label ? button.label : "label";
+    this.hash = button && button.hash ? button.hash : "";
   }
 
   /** проверка структуры */
@@ -236,9 +236,9 @@ export class ButtonActionCallback implements ButtonAction {
   label: string;
   payload: string;
 
-  constructor() {
-    this.label = "label";
-    this.payload = "";
+  constructor(button?: ButtonAction) {
+    this.label = button && button.label ? button.label : "label";
+    this.payload = button && button.payload ? button.payload : "";
   }
 
   /** проверка структуры */
@@ -253,7 +253,7 @@ export class ButtonActionCallback implements ButtonAction {
 }
 
 /**
- * Класс объекта cтруктуры buttons
+ * Класс объекта структуры buttons
  */
 export class Button extends WritableClass {
   /** объект, описывающий тип действия и его параметры. Поля объекта зависят от значения параметра **type** */
@@ -268,7 +268,7 @@ export class Button extends WritableClass {
   }
 
   toText(): void {
-    this.action = new ButtonActionText();
+    this.action = new ButtonActionText(this.action);
     if (!this.color) {
       this.color = Color.Primary;
     }
@@ -276,34 +276,32 @@ export class Button extends WritableClass {
   }
 
   toOpenLink(): void {
-    this.action = new ButtonActionOpenLink();
+    this.action = new ButtonActionOpenLink(this.action);
     this.color = undefined;
     this._notifyAll()
   }
 
   toLocation(): void {
-    this.action = new ButtonActionLocation();
+    this.action = new ButtonActionLocation(this.action);
     this.color = undefined;
     this._notifyAll()
   }
 
   toVKPay(): void {
-    this.action = new ButtonActionVKPay();
+    this.action = new ButtonActionVKPay(this.action);
     this.color = undefined;
     this._notifyAll()
   }
 
   toVKApps(): void {
-    this.action = new ButtonActionVKApps();
+    this.action = new ButtonActionVKApps(this.action);
     this.color = undefined;
     this._notifyAll()
   }
 
   toCallback(): void {
-    this.action = new ButtonActionCallback();
-    if (!this.color) {
-      this.color = Color.Primary;
-    }
+    this.action = new ButtonActionCallback(this.action);
+    this.color = this.color ? this.color : Color.Primary
     this._notifyAll()
   }
 
@@ -453,7 +451,7 @@ export class Keyboard extends WritableClass {
         // OPEN_APP => 2,
         // OPEN_LINK => 2
 
-        if (typeStat.dict[ButtonType.VKPay] && row.length > 1 ) {
+        if (typeStat.dict[ButtonType.VKPay] && row.length > 1) {
           error += `the row ${i} with button of type vkpay can contain only 1 button(s)\n`
         }
 

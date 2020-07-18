@@ -2,7 +2,7 @@
 
 Генерирует [клавиатуру](https://vk.com/dev/bots_docs_3) для ботов. Проверить клавиатуру можно отправив JSON [боту](https://vk.com/im?sel=-174472256).
 
-## Поддерживаеммые языки
+## Поддерживаемые языки
 
 - JSON
 - [VK SDK](https://github.com/SevereCloud/vksdk) (Golang)

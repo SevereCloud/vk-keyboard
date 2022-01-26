@@ -1,7 +1,7 @@
 import { Keyboard, ButtonType, Color } from "./keyboard";
 
 function stringToJS(v: string): string {
-    v.replace("`", "\\`")
+    v = v.replace("`", "\\`")
     return `\`${v}\``
 }
 

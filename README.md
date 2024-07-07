@@ -6,18 +6,16 @@
 
 - JSON
 - [VK SDK](https://github.com/SevereCloud/vksdk) (Golang)
-- [VK-IO](https://github.com/negezor/vk-io/blob/master/docs/ru/api-reference/buttons/keyboard.md) (Node.js)
+- [VK-IO](https://github.com/negezor/vk-io) (Node.js)
 
 ## Запустить локально
-
-Код основан на магически исчезающем фреймоврке [Svelte](https://svelte.technology/)
 
 ```bash
 cd vk-keyboard
 npm install
 ```
 
-Запустить сервер на [localhost:5000](http://localhost:5000):
+Запустить сервер на [localhost:3000](http://localhost:3000):
 
 ```bash
 npm run dev

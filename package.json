@@ -1,42 +1,37 @@
 {
-  "name": "keyboard",
-  "version": "1.0.0",
+  "name": "vk-keyboard",
+  "version": "0.2.0",
+  "private": true,
   "scripts": {
-    "build": "rollup -c",
-    "dev": "rollup -c -w",
-    "start": "sirv public"
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint",
+    "test": "echo \"no test\"",
+    "postinstall": "patch-package"
   },
   "devDependencies": {
-    "@rollup/plugin-commonjs": "^11.0.2",
-    "@rollup/plugin-node-resolve": "^6.1.0",
-    "@rollup/plugin-typescript": "^2.1.0",
-    "@typescript-eslint/eslint-plugin": "^5.10.1",
-    "@typescript-eslint/parser": "^5.10.1",
-    "eslint": "^8.7.0",
-    "eslint-plugin-svelte3": "^2.7.3",
-    "rollup": "^1.32.1",
-    "rollup-plugin-livereload": "^1.1.0",
-    "rollup-plugin-svelte": "^5.2.1",
-    "rollup-plugin-terser": "^5.3.0",
-    "svelte": "^3.20.1",
-    "tslib": "^1.11.1",
-    "typescript": "^3.8.3"
-  },
-  "dependencies": {
-    "rollup-plugin-postcss": "^4.0.2",
-    "sirv-cli": "^0.4.5",
-    "svelte-highlight": "^5.2.0"
-  },
-  "description": "Генератор клавиатуры для VK",
-  "main": "rollup.config.js",
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/SevereCloud/vk-keyboard.git"
-  },
-  "author": "SevereCloud",
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/SevereCloud/vk-keyboard/issues"
-  },
-  "homepage": "https://github.com/SevereCloud/vk-keyboard#readme"
+    "@types/node": "^20",
+    "@types/react": "^18",
+    "@types/react-dom": "^18",
+    "@types/react-syntax-highlighter": "^15",
+    "@types/uuid": "^10",
+    "@vkontakte/icons": "^2",
+    "@vkontakte/vkui": "^6",
+    "@vkontakte/vkui-tokens": "^4",
+    "eslint": "^8",
+    "eslint-config-next": "^14",
+    "eslint-config-prettier": "^9",
+    "next": "^14",
+    "patch-package": "^8",
+    "react": "^18",
+    "react-dom": "^18",
+    "react-syntax-highlighter": "^15",
+    "signal-polyfill": "^0.1",
+    "signal-utils": "^0.18",
+    "typescript": "^5",
+    "use-signals": "^0.1",
+    "uuid": "^10",
+    "prettier": "^3"
+  }
 }

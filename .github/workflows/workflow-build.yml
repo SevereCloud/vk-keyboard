@@ -14,15 +14,14 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: "20"
-          cache: "yarn"
 
       - name: Install 🔆
         run: |
-          yarn install
+          npm install
 
       - name: Build 🔧
         run: |
-          yarn build
+          npm build
 
       - name: Upload artifacts
         uses: actions/upload-artifact@v4

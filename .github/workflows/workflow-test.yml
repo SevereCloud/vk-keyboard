@@ -12,19 +12,18 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: "20"
-          cache: "yarn"
 
       - name: Install 🔆
         run: |
-          yarn install
+          npm install
 
       - name: Lint 🔧
         run: |
-          yarn run lint
+          npm run lint
 
       - name: Test 🔧
         run: |
-          yarn run test
+          npm run test
 
       - name: Upload coverage to Codecov
         uses: codecov/codecov-action@v3

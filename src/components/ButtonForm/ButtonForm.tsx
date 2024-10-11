@@ -65,11 +65,10 @@ export function ButtonForm({
     <>
       <ButtonActionType>{button}</ButtonActionType>
       {form}
-
       <CellButton
         centered
         onClick={() => app.keyboard.deleteSelectedButton()}
-        mode="danger"
+        appearance="negative"
       >
         Удалить кнопку
       </CellButton>

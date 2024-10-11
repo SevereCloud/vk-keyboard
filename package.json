@@ -17,7 +17,7 @@
     "@types/react-syntax-highlighter": "^15",
     "@types/uuid": "^10",
     "@vkontakte/icons": "^2",
-    "@vkontakte/vkui": "^6",
+    "@vkontakte/vkui": "^7.0.0-beta.0",
     "@vkontakte/vkui-tokens": "^4",
     "eslint": "^8",
     "eslint-config-next": "^14",

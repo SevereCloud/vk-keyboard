@@ -31,7 +31,7 @@
     "signal-utils": "^0.18",
     "typescript": "^5",
     "use-signals": "^0.1",
-    "uuid": "^10",
+    "uuid": "^11",
     "prettier": "^3"
   }
 }

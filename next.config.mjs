@@ -15,6 +15,9 @@ const nextConfig = {
       skipDefaultConversion: true,
     },
   },
+  experimental: {
+    optimizePackageImports: ["@vkontakte/vkui", "@vkontakte/icons"],
+  },
 };
 
 export default nextConfig;

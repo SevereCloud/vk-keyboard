@@ -1,3 +1,5 @@
+"use client";
+
 import * as React from "react";
 
 import { CellButton, CustomSelect, FormItem } from "@vkontakte/vkui";
@@ -9,6 +11,7 @@ import { ButtonLocationForm } from "./Buttons/ButtonLocationForm";
 import { ButtonVKPayForm } from "./Buttons/ButtonVKPayForm";
 import { ButtonOpenAppForm } from "./Buttons/ButtonOpenAppForm";
 import { ButtonCallbackForm } from "./Buttons/ButtonCallbackForm";
+import { useSignal } from "use-signals";
 
 function ButtonActionType({ children: button }: { children: keyboard.Button }) {
   const handleChange: React.ChangeEventHandler<HTMLSelectElement> = (e) => {
@@ -40,11 +43,8 @@ function ButtonActionType({ children: button }: { children: keyboard.Button }) {
   );
 }
 
-export function ButtonForm({
-  children: button,
-}: {
-  children: keyboard.Button;
-}) {
+export function ButtonForm() {
+  const button = useSignal(app.keyboard.selectedButton);
   let form: React.ReactNode = null;
 
   if (button instanceof keyboard.ButtonText) {

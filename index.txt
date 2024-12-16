@@ -1,20 +1,20 @@
-6:"$Sreact.fragment"
-7:I[5244,[],""]
-8:I[3866,[],""]
-9:I[7033,[],"ClientPageRoot"]
-a:I[4442,["331","static/chunks/331-41ee2cf9d7e5a4c0.js","974","static/chunks/app/page-393833b244a90ab4.js"],"default"]
-d:I[6213,[],"OutletBoundary"]
-f:I[6213,[],"MetadataBoundary"]
-11:I[6213,[],"ViewportBoundary"]
-13:I[4835,[],""]
-1:HL["/vk-keyboard/_next/static/css/4b4251f77d5939d2.css","style"]
-2:HL["/vk-keyboard/_next/static/css/0463e078794ff514.css","style"]
-3:HL["/vk-keyboard/_next/static/css/e8ed4ef1073f3dc8.css","style"]
-4:HL["/vk-keyboard/_next/static/css/92fe1bef7e6f3944.css","style"]
-5:HL["/vk-keyboard/_next/static/css/817778050c2e1470.css","style"]
-0:{"P":null,"b":"Qrg6jNnumezTtyWJSWzO-","p":"/vk-keyboard","c":["",""],"i":false,"f":[[["",{"children":["__PAGE__",{}]},"$undefined","$undefined",true],["",["$","$6","c",{"children":[[["$","link","0",{"rel":"stylesheet","href":"/vk-keyboard/_next/static/css/4b4251f77d5939d2.css","precedence":"next","crossOrigin":"$undefined","nonce":"$undefined"}],["$","link","1",{"rel":"stylesheet","href":"/vk-keyboard/_next/static/css/0463e078794ff514.css","precedence":"next","crossOrigin":"$undefined","nonce":"$undefined"}]],["$","html",null,{"lang":"ru","className":"vkui","children":["$","body",null,{"children":["$","$L7",null,{"parallelRouterKey":"children","segmentPath":["children"],"error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L8",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":[[],"404"],"forbidden":"$undefined","unauthorized":"$undefined"}]}]}]]}],{"children":["__PAGE__",["$","$6","c",{"children":[["$","$L9",null,{"Component":"$a","searchParams":{},"params":{},"promises":["$@b","$@c"]}],[["$","link","0",{"rel":"stylesheet","href":"/vk-keyboard/_next/static/css/e8ed4ef1073f3dc8.css","precedence":"next","crossOrigin":"$undefined","nonce":"$undefined"}],["$","link","1",{"rel":"stylesheet","href":"/vk-keyboard/_next/static/css/92fe1bef7e6f3944.css","precedence":"next","crossOrigin":"$undefined","nonce":"$undefined"}],["$","link","2",{"rel":"stylesheet","href":"/vk-keyboard/_next/static/css/817778050c2e1470.css","precedence":"next","crossOrigin":"$undefined","nonce":"$undefined"}]],["$","$Ld",null,{"children":"$Le"}]]}],{},null]},null],["$","$6","h",{"children":[null,["$","$6","F1yhEWEi-QmmegenuR4pO",{"children":[["$","$Lf",null,{"children":"$L10"}],["$","$L11",null,{"children":"$L12"}],null]}]]}]]],"m":"$undefined","G":["$13","$undefined"],"s":false,"S":true}
-b:{}
-c:{}
-12:[["$","meta","0",{"name":"viewport","content":"width=device-width, initial-scale=1"}]]
-10:[["$","meta","0",{"charSet":"utf-8"}],["$","title","1",{"children":"Генератор клавиатуры"}],["$","meta","2",{"name":"description","content":"Генератор клавиатуры ботов для ВКонтакте"}],["$","link","3",{"rel":"icon","href":"/favicon.ico","type":"image/x-icon","sizes":"16x16"}]]
-e:null
+1:"$Sreact.fragment"
+2:I[5244,[],""]
+3:I[3866,[],""]
+4:I[7033,[],"ClientPageRoot"]
+5:I[4442,["331","static/chunks/331-41ee2cf9d7e5a4c0.js","974","static/chunks/app/page-393833b244a90ab4.js"],"default"]
+8:I[6213,[],"OutletBoundary"]
+a:I[6213,[],"MetadataBoundary"]
+c:I[6213,[],"ViewportBoundary"]
+e:I[4835,[],""]
+:HL["/vk-keyboard/_next/static/css/4b4251f77d5939d2.css","style"]
+:HL["/vk-keyboard/_next/static/css/0463e078794ff514.css","style"]
+:HL["/vk-keyboard/_next/static/css/e8ed4ef1073f3dc8.css","style"]
+:HL["/vk-keyboard/_next/static/css/92fe1bef7e6f3944.css","style"]
+:HL["/vk-keyboard/_next/static/css/817778050c2e1470.css","style"]
+0:{"P":null,"b":"Z6EobCqMbr1jQRVpFJ2wd","p":"/vk-keyboard","c":["",""],"i":false,"f":[[["",{"children":["__PAGE__",{}]},"$undefined","$undefined",true],["",["$","$1","c",{"children":[[["$","link","0",{"rel":"stylesheet","href":"/vk-keyboard/_next/static/css/4b4251f77d5939d2.css","precedence":"next","crossOrigin":"$undefined","nonce":"$undefined"}],["$","link","1",{"rel":"stylesheet","href":"/vk-keyboard/_next/static/css/0463e078794ff514.css","precedence":"next","crossOrigin":"$undefined","nonce":"$undefined"}]],["$","html",null,{"lang":"ru","className":"vkui","children":["$","body",null,{"children":["$","$L2",null,{"parallelRouterKey":"children","segmentPath":["children"],"error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L3",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":[[],"404"],"forbidden":"$undefined","unauthorized":"$undefined"}]}]}]]}],{"children":["__PAGE__",["$","$1","c",{"children":[["$","$L4",null,{"Component":"$5","searchParams":{},"params":{},"promises":["$@6","$@7"]}],[["$","link","0",{"rel":"stylesheet","href":"/vk-keyboard/_next/static/css/e8ed4ef1073f3dc8.css","precedence":"next","crossOrigin":"$undefined","nonce":"$undefined"}],["$","link","1",{"rel":"stylesheet","href":"/vk-keyboard/_next/static/css/92fe1bef7e6f3944.css","precedence":"next","crossOrigin":"$undefined","nonce":"$undefined"}],["$","link","2",{"rel":"stylesheet","href":"/vk-keyboard/_next/static/css/817778050c2e1470.css","precedence":"next","crossOrigin":"$undefined","nonce":"$undefined"}]],["$","$L8",null,{"children":"$L9"}]]}],{},null,false]},null,false],["$","$1","h",{"children":[null,["$","$1","rTMD857WHdKWXlTf8k2a3",{"children":[["$","$La",null,{"children":"$Lb"}],["$","$Lc",null,{"children":"$Ld"}],null]}]]}],false]],"m":"$undefined","G":["$e","$undefined"],"s":false,"S":true}
+6:{}
+7:{}
+d:[["$","meta","0",{"name":"viewport","content":"width=device-width, initial-scale=1"}]]
+b:[["$","meta","0",{"charSet":"utf-8"}],["$","title","1",{"children":"Генератор клавиатуры"}],["$","meta","2",{"name":"description","content":"Генератор клавиатуры ботов для ВКонтакте"}],["$","link","3",{"rel":"icon","href":"/favicon.ico","type":"image/x-icon","sizes":"16x16"}]]
+9:null

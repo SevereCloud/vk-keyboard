@@ -24,6 +24,7 @@
     "eslint-config-prettier": "^9",
     "next": "^15.1.4",
     "patch-package": "^8",
+    "prettier": "^3",
     "react": "^19",
     "react-dom": "^19",
     "react-syntax-highlighter": "^15",
@@ -31,7 +32,7 @@
     "signal-utils": "^0.18",
     "typescript": "^5",
     "use-signals": "^0.1",
-    "uuid": "^11",
-    "prettier": "^3"
-  }
+    "uuid": "^11"
+  },
+  "packageManager": "yarn@4.6.0+sha512.5383cc12567a95f1d668fbe762dfe0075c595b4bfff433be478dbbe24e05251a8e8c3eb992a986667c1d53b6c3a9c85b8398c35a960587fbd9fa3a0915406728"
 }

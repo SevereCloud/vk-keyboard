@@ -10,10 +10,10 @@ import { FormItem, Input } from "@vkontakte/vkui";
 import { $ } from "use-signals";
 
 type FormProps = Readonly<{
-  children: ButtonOpenApp;
+  button: ButtonOpenApp;
 }>;
 
-function ButtonActionAppIDForm({ children: button }: FormProps) {
+function ButtonActionAppIDForm({ button }: FormProps) {
   const handleChange: React.ChangeEventHandler<HTMLInputElement> = (event) => {
     button.action.appId.set(event.currentTarget.valueAsNumber);
   };
@@ -30,7 +30,7 @@ function ButtonActionAppIDForm({ children: button }: FormProps) {
   );
 }
 
-function ButtonActionOwnerIDForm({ children: button }: FormProps) {
+function ButtonActionOwnerIDForm({ button }: FormProps) {
   const handleChange: React.ChangeEventHandler<HTMLInputElement> = (event) => {
     button.action.ownerId.set(event.currentTarget.valueAsNumber);
   };
@@ -47,7 +47,7 @@ function ButtonActionOwnerIDForm({ children: button }: FormProps) {
   );
 }
 
-function ButtonActionHashForm({ children: button }: FormProps) {
+function ButtonActionHashForm({ button }: FormProps) {
   const handleChange: React.ChangeEventHandler<HTMLInputElement> = (event) => {
     button.action.hash.set(event.currentTarget.value);
   };
@@ -64,14 +64,14 @@ function ButtonActionHashForm({ children: button }: FormProps) {
   );
 }
 
-export function ButtonOpenAppForm({ children: button }: FormProps) {
+export function ButtonOpenAppForm({ button }: FormProps) {
   return (
     <>
-      <ButtonActionLabelForm>{button}</ButtonActionLabelForm>
-      <ButtonActionAppIDForm>{button}</ButtonActionAppIDForm>
-      <ButtonActionOwnerIDForm>{button}</ButtonActionOwnerIDForm>
-      <ButtonActionHashForm>{button}</ButtonActionHashForm>
-      <ButtonActionPayloadForm>{button.action}</ButtonActionPayloadForm>
+      <ButtonActionLabelForm button={button} />
+      <ButtonActionAppIDForm button={button} />
+      <ButtonActionOwnerIDForm button={button} />
+      <ButtonActionHashForm button={button} />
+      <ButtonActionPayloadForm action={button.action} />
     </>
   );
 }

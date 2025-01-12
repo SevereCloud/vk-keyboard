@@ -10,17 +10,23 @@ SyntaxHighlighter.registerLanguage("javascript", javascript);
 SyntaxHighlighter.registerLanguage("go", go);
 SyntaxHighlighter.registerLanguage("json", json);
 
-export function Code({
-  style,
-  ...props
-}: React.ComponentProps<typeof SyntaxHighlighter>) {
+type CodeProps = Omit<
+  React.ComponentProps<typeof SyntaxHighlighter>,
+  "children"
+> & {
+  children?: string;
+};
+
+export function Code({ style, children = "", ...props }: CodeProps) {
   return (
     <Div>
       <SyntaxHighlighter
         style={{ ...theme, ...style }}
         customStyle={{ borderRadius: 8, padding: 16, margin: 0 }}
         {...props}
-      />
+      >
+        {children}
+      </SyntaxHighlighter>
     </Div>
   );
 }

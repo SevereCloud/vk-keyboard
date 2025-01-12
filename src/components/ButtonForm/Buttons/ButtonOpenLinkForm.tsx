@@ -10,10 +10,10 @@ import { FormItem, Input } from "@vkontakte/vkui";
 import { useSignal, $ } from "use-signals";
 
 type FormProps = Readonly<{
-  children: ButtonOpenLink;
+  button: ButtonOpenLink;
 }>;
 
-function ButtonActionLinkForm({ children: button }: FormProps) {
+function ButtonActionLinkForm({ button }: FormProps) {
   const handleChange: React.ChangeEventHandler<HTMLInputElement> = (event) => {
     button.action.link.set(event.currentTarget.value);
   };
@@ -38,12 +38,12 @@ function ButtonActionLinkForm({ children: button }: FormProps) {
   );
 }
 
-export function ButtonOpenLinkForm({ children: button }: FormProps) {
+export function ButtonOpenLinkForm({ button }: FormProps) {
   return (
     <>
-      <ButtonActionLabelForm>{button}</ButtonActionLabelForm>
-      <ButtonActionLinkForm>{button}</ButtonActionLinkForm>
-      <ButtonActionPayloadForm>{button.action}</ButtonActionPayloadForm>
+      <ButtonActionLabelForm button={button}/>
+      <ButtonActionLinkForm button={button}/>
+      <ButtonActionPayloadForm action={button.action} />
     </>
   );
 }

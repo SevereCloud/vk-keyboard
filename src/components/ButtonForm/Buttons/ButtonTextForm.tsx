@@ -4,15 +4,15 @@ import { ButtonColorForm } from "./FormItem/ButtonColorForm";
 import { ButtonActionLabelForm } from "./FormItem/ButtonActionLabelForm";
 
 type FormProps = Readonly<{
-  children: ButtonText;
+  button: ButtonText;
 }>;
 
-export function ButtonTextForm({ children: button }: FormProps) {
+export function ButtonTextForm({ button }: FormProps) {
   return (
     <>
-      <ButtonActionLabelForm>{button}</ButtonActionLabelForm>
-      <ButtonActionPayloadForm>{button.action}</ButtonActionPayloadForm>
-      <ButtonColorForm>{button}</ButtonColorForm>
+      <ButtonActionLabelForm button={button} />
+      <ButtonActionPayloadForm action={button.action} />
+      <ButtonColorForm button={button} />
     </>
   );
 }

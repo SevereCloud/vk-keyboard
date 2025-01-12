@@ -4,13 +4,13 @@ import { ButtonLocation } from "@/logic/keyboard";
 import { ButtonActionPayloadForm } from "./FormItem/ButtonActionPayloadForm";
 
 type FormProps = Readonly<{
-  children: ButtonLocation;
+  button: ButtonLocation;
 }>;
 
-export function ButtonLocationForm({ children: button }: FormProps) {
+export function ButtonLocationForm({ button }: FormProps) {
   return (
     <>
-      <ButtonActionPayloadForm>{button.action}</ButtonActionPayloadForm>
+      <ButtonActionPayloadForm action={button.action} />
     </>
   );
 }

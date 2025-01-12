@@ -12,9 +12,9 @@ interface ButtonWithActionLabelProps {
 }
 
 export function ButtonActionLabelForm({
-  children: button,
+  button,
 }: {
-  children: ButtonWithActionLabelProps;
+  button: ButtonWithActionLabelProps;
 }) {
   const handleChange: React.ChangeEventHandler<HTMLInputElement> = (event) => {
     button.action.label.set(event.currentTarget.value);

@@ -9,10 +9,10 @@ import { FormItem, Input } from "@vkontakte/vkui";
 import { useSignal, $ } from "use-signals";
 
 type FormProps = Readonly<{
-  children: ButtonVKPay;
+  button: ButtonVKPay;
 }>;
 
-function ButtonActionHashForm({ children: button }: FormProps) {
+function ButtonActionHashForm({ button }: FormProps) {
   const handleChange: React.ChangeEventHandler<HTMLInputElement> = (event) => {
     button.action.hash.set(event.currentTarget.value);
   };
@@ -37,11 +37,11 @@ function ButtonActionHashForm({ children: button }: FormProps) {
   );
 }
 
-export function ButtonVKPayForm({ children: button }: FormProps) {
+export function ButtonVKPayForm({ button }: FormProps) {
   return (
     <>
-      <ButtonActionHashForm>{button}</ButtonActionHashForm>
-      <ButtonActionPayloadForm>{button.action}</ButtonActionPayloadForm>
+      <ButtonActionHashForm button={button} />
+      <ButtonActionPayloadForm action={button.action} />
     </>
   );
 }

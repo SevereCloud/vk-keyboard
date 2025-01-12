@@ -7,9 +7,9 @@ import { $, useSignal } from "use-signals";
 import { ButtonActionPayload } from "@/logic/keyboard";
 
 export function ButtonActionPayloadForm({
-  children: action,
+  action,
 }: {
-  children: ButtonActionPayload;
+  action: ButtonActionPayload;
 }) {
   const handleChange: React.ChangeEventHandler<HTMLInputElement> = (event) => {
     action.payload.set(event.currentTarget.value);

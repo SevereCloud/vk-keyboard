@@ -13,7 +13,7 @@ import { ButtonOpenAppForm } from "./Buttons/ButtonOpenAppForm";
 import { ButtonCallbackForm } from "./Buttons/ButtonCallbackForm";
 import { useSignal } from "use-signals";
 
-function ButtonActionType({ children: button }: { children: keyboard.Button }) {
+function ButtonActionType({ button }: { button: keyboard.Button }) {
   const handleChange: React.ChangeEventHandler<HTMLSelectElement> = (e) => {
     app.keyboard.changeSelectedButtonType(e.currentTarget.value as "text");
   };
@@ -48,22 +48,22 @@ export function ButtonForm() {
   let form: React.ReactNode = null;
 
   if (button instanceof keyboard.ButtonText) {
-    form = <ButtonTextForm>{button}</ButtonTextForm>;
+    form = <ButtonTextForm button={button} />;
   } else if (button instanceof keyboard.ButtonOpenLink) {
-    form = <ButtonOpenLinkForm>{button}</ButtonOpenLinkForm>;
+    form = <ButtonOpenLinkForm button={button} />;
   } else if (button instanceof keyboard.ButtonLocation) {
-    form = <ButtonLocationForm>{button}</ButtonLocationForm>;
+    form = <ButtonLocationForm button={button} />;
   } else if (button instanceof keyboard.ButtonVKPay) {
-    form = <ButtonVKPayForm>{button}</ButtonVKPayForm>;
+    form = <ButtonVKPayForm button={button} />;
   } else if (button instanceof keyboard.ButtonOpenApp) {
-    form = <ButtonOpenAppForm>{button}</ButtonOpenAppForm>;
+    form = <ButtonOpenAppForm button={button} />;
   } else if (button instanceof keyboard.ButtonCallback) {
-    form = <ButtonCallbackForm>{button}</ButtonCallbackForm>;
+    form = <ButtonCallbackForm button={button} />;
   }
 
   return (
     <>
-      <ButtonActionType>{button}</ButtonActionType>
+      <ButtonActionType button={button} />
       {form}
       <CellButton
         centered

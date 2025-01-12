@@ -18,11 +18,7 @@ const colors = {
   negative: "var(--vkui--color_background_negative)",
 };
 
-export function ButtonColorForm({
-  children: button,
-}: {
-  children: ButtonColor;
-}) {
+export function ButtonColorForm({ button }: { button: ButtonColor }) {
   const handleChange = (value: SegmentedControlValue) => {
     button.color.set(value as "primary");
   };

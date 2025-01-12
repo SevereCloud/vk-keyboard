@@ -22,6 +22,7 @@ export class JSONView {
   readonly minify = new Signal.State(false);
 
   readonly code = new Signal.Computed(() => {
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
     const data: any = {};
 
     const inline = this.#keyboard.inline.get();

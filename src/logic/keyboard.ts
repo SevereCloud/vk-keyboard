@@ -169,7 +169,7 @@ export function checkPayload(payload: string | undefined): Array<string> {
   try {
     JSON.parse(payload);
   } catch (e) {
-    error.push("payload contains incorrect JSON");
+    error.push(`payload contains incorrect JSON: ${e}`);
   }
 
   return error;
@@ -261,7 +261,7 @@ class ButtonOpenLinkAction extends ButtonActionPayload {
     try {
       JSON.parse(payload);
     } catch (e) {
-      errors.push("payload contains incorrect JSON");
+      errors.push(`payload contains incorrect JSON ${e}`);
     }
 
     return errors;

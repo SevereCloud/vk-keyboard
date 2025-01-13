@@ -3556,12 +3556,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"signal-utils@npm:^0.18":
-  version: 0.18.0
-  resolution: "signal-utils@npm:0.18.0"
+"signal-utils@npm:^0.21":
+  version: 0.21.1
+  resolution: "signal-utils@npm:0.21.1"
   peerDependencies:
-    signal-polyfill: ^0.1.0
-  checksum: 10c0/886ea256947dcc6463b7be89402ed5fbcbb2c463c85c02ebf5498fe3b5fcb612c9c214964edc2059e882f3c427cd254c2a665da4c97cd3cbd364196558706b35
+    signal-polyfill: ^0.2.0
+  checksum: 10c0/e42ea9b4af0b6054eb4e4f7dd97d9fb2c115fba34c024e4ebbf2879785b8e61c1d6562ccddeef185bbd64f80f985b38a3631e35bfdfd317dcd42224c05aed587
   languageName: node
   linkType: hard
 
@@ -3948,7 +3948,7 @@ __metadata:
     react-dom: "npm:^19"
     react-syntax-highlighter: "npm:^15"
     signal-polyfill: "npm:^0.1"
-    signal-utils: "npm:^0.18"
+    signal-utils: "npm:^0.21"
     typescript: "npm:^5"
     use-signals: "npm:^0.1"
     uuid: "npm:^11"

@@ -736,8 +736,8 @@ __metadata:
   linkType: hard
 
 "@vkontakte/vkui@npm:^7":
-  version: 7.1.0
-  resolution: "@vkontakte/vkui@npm:7.1.0"
+  version: 7.1.1
+  resolution: "@vkontakte/vkui@npm:7.1.1"
   dependencies:
     "@swc/helpers": "npm:^0.5.15"
     "@vkontakte/icons": "npm:^2.115.0"
@@ -747,7 +747,7 @@ __metadata:
   peerDependencies:
     react: ^18.2.0 || ^19.0.0
     react-dom: ^18.2.0 || ^19.0.0
-  checksum: 10c0/78380bef3eabdcf6bea920c45caf10c384674ac1f03aaa7d1dbb520684a3f5d8447dcbcd45643e5890c1527f75d50c300b49948d3290dc775840514099bc98d0
+  checksum: 10c0/4aa7273439b741096434d4053ba2175e7af8be948066fe0a3e2c7bb869ed9864abd2358e6f44b1659834ec01b226b117c2a27bf09d5cfbb85e26acb65bafd00d
   languageName: node
   linkType: hard
 

@@ -693,13 +693,13 @@ __metadata:
   linkType: hard
 
 "@vkontakte/icons@npm:^2, @vkontakte/icons@npm:^2.115.0":
-  version: 2.160.0
-  resolution: "@vkontakte/icons@npm:2.160.0"
+  version: 2.165.0
+  resolution: "@vkontakte/icons@npm:2.165.0"
   dependencies:
     "@vkontakte/icons-sprite": "npm:2.3.1"
   peerDependencies:
     react: ^16.9.34 || ^17 || ^18
-  checksum: 10c0/106de288df4ae6cbb1bcb0275405e49603deb5a775b1bbd35d10e29232ed3f495808ebbd498487d8c0aaa9ec202667ac530bd37aff669f48ab1c682c25e89a4c
+  checksum: 10c0/5422d4d8614dbdc0c75855a92e0cb50b84b9a6267f4022a39662c9070bf8cc55b154792bd811b41c33967ad3b4ed5211f5d08e398f15d0e0fd29791624a5f317
   languageName: node
   linkType: hard
 

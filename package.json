@@ -21,7 +21,7 @@
     "@vkontakte/vkui-tokens": "^4",
     "eslint": "^9",
     "eslint-config-next": "^15",
-    "eslint-config-prettier": "^9",
+    "eslint-config-prettier": "^10",
     "next": "^15.2.4",
     "patch-package": "^8",
     "prettier": "^3",

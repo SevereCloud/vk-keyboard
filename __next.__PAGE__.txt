@@ -1,0 +1,11 @@
+1:"$Sreact.fragment"
+2:I[47257,["/vk-keyboard/_next/static/chunks/3c6bdbbcefe48938.js"],"ClientPageRoot"]
+3:I[52683,["/vk-keyboard/_next/static/chunks/3cddfa1c6dbac076.js"],"default"]
+6:I[97367,["/vk-keyboard/_next/static/chunks/3c6bdbbcefe48938.js"],"OutletBoundary"]
+7:"$Sreact.suspense"
+:HL["/vk-keyboard/_next/static/chunks/5b46a96e708a13ff.css","style"]
+:HL["/vk-keyboard/_next/static/chunks/960826979234de50.css","style"]
+0:{"buildId":"0rOmuiET1W6PTxj-NnKaC","rsc":["$","$1","c",{"children":[["$","$L2",null,{"Component":"$3","serverProvidedParams":{"searchParams":{},"params":{},"promises":["$@4","$@5"]}}],[["$","link","0",{"rel":"stylesheet","href":"/vk-keyboard/_next/static/chunks/5b46a96e708a13ff.css","precedence":"next"}],["$","link","1",{"rel":"stylesheet","href":"/vk-keyboard/_next/static/chunks/960826979234de50.css","precedence":"next"}],["$","script","script-0",{"src":"/vk-keyboard/_next/static/chunks/3cddfa1c6dbac076.js","async":true}]],["$","$L6",null,{"children":["$","$7",null,{"name":"Next.MetadataOutlet","children":"$@8"}]}]]}],"loading":null,"isPartial":false}
+4:{}
+5:"$0:rsc:props:children:0:props:serverProvidedParams:params"
+8:null

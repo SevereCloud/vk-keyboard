@@ -3590,10 +3590,17 @@ __metadata:
   languageName: node
   linkType: hard
 
-"signal-polyfill@npm:^0.1, signal-polyfill@npm:^0.1.0":
+"signal-polyfill@npm:^0.1.0":
   version: 0.1.2
   resolution: "signal-polyfill@npm:0.1.2"
   checksum: 10c0/93096b9bd471ef1e500a1803e23a64837888bd9bfc894880d8341cefea6362d602b10d5ec21f2efaa5c45319927a734b479513efcedcd687491afbe5ec0cf379
+  languageName: node
+  linkType: hard
+
+"signal-polyfill@npm:^0.2":
+  version: 0.2.2
+  resolution: "signal-polyfill@npm:0.2.2"
+  checksum: 10c0/485b0e66d93961454af32e7fbff88130138dffcbf7bce35e5c873d760ceb9ce33a125dd63cc59454c739c43246980515b1162cbe0ebc975a974ee036fb58d18a
   languageName: node
   linkType: hard
 
@@ -3981,7 +3988,7 @@ __metadata:
     react: "npm:^19"
     react-dom: "npm:^19"
     react-syntax-highlighter: "npm:^15"
-    signal-polyfill: "npm:^0.1"
+    signal-polyfill: "npm:^0.2"
     signal-utils: "npm:^0.18"
     typescript: "npm:^5"
     use-signals: "npm:^0.1"

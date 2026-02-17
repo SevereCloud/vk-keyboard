@@ -2,4 +2,4 @@
 2:I[39756,["/vk-keyboard/_next/static/chunks/4d518823ade4dafd.js"],"default"]
 3:I[37457,["/vk-keyboard/_next/static/chunks/4d518823ade4dafd.js"],"default"]
 :HL["/vk-keyboard/_next/static/chunks/eddc433a8ccf81e6.css","style"]
-0:{"buildId":"bPyhOBp2Unj6Effw7SBPD","rsc":["$","$1","c",{"children":[[["$","link","0",{"rel":"stylesheet","href":"/vk-keyboard/_next/static/chunks/eddc433a8ccf81e6.css","precedence":"next"}]],["$","html",null,{"lang":"ru","className":"vkui","children":["$","body",null,{"children":["$","$L2",null,{"parallelRouterKey":"children","template":["$","$L3",null,{}],"notFound":["404",[]]}]}]}]]}],"loading":null,"isPartial":false}
+0:{"buildId":"vFaO9l57kG4ZCBHGjmY_e","rsc":["$","$1","c",{"children":[[["$","link","0",{"rel":"stylesheet","href":"/vk-keyboard/_next/static/chunks/eddc433a8ccf81e6.css","precedence":"next"}]],["$","html",null,{"lang":"ru","className":"vkui","children":["$","body",null,{"children":["$","$L2",null,{"parallelRouterKey":"children","template":["$","$L3",null,{}],"notFound":["404",[]]}]}]}]]}],"loading":null,"isPartial":false}

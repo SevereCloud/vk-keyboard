@@ -1,4 +1,4 @@
 1:"$Sreact.fragment"
 2:I[39756,["/vk-keyboard/_next/static/chunks/4d518823ade4dafd.js"],"default"]
 3:I[37457,["/vk-keyboard/_next/static/chunks/4d518823ade4dafd.js"],"default"]
-0:{"buildId":"Yd5cZ1-Xig2gRRVmyP-34","rsc":["$","$1","c",{"children":[null,["$","$L2",null,{"parallelRouterKey":"children","template":["$","$L3",null,{}]}]]}],"loading":null,"isPartial":false}
+0:{"buildId":"0jFxBTCDTa_sCXPu2y1U4","rsc":["$","$1","c",{"children":[null,["$","$L2",null,{"parallelRouterKey":"children","template":["$","$L3",null,{}]}]]}],"loading":null,"isPartial":false}

@@ -1,11 +1,11 @@
 1:"$Sreact.fragment"
 2:I[47257,["/vk-keyboard/_next/static/chunks/0lzg7skkyx0yf.js"],"ClientPageRoot"]
-3:I[52683,["/vk-keyboard/_next/static/chunks/0lzg7skkyx0yf.js","/vk-keyboard/_next/static/chunks/0c21iknjp~9g..js"],"default"]
+3:I[52683,["/vk-keyboard/_next/static/chunks/0lzg7skkyx0yf.js","/vk-keyboard/_next/static/chunks/0muygy7ah_wka.js"],"default"]
 6:I[97367,["/vk-keyboard/_next/static/chunks/0lzg7skkyx0yf.js"],"OutletBoundary"]
 7:"$Sreact.suspense"
 :HL["/vk-keyboard/_next/static/chunks/0jwv2ovzeobsr.css","style"]
 :HL["/vk-keyboard/_next/static/chunks/07b~0kae0d8qv.css","style"]
-0:{"rsc":["$","$1","c",{"children":[["$","$L2",null,{"Component":"$3","serverProvidedParams":{"searchParams":{},"params":{},"promises":["$@4","$@5"]}}],[["$","link","0",{"rel":"stylesheet","href":"/vk-keyboard/_next/static/chunks/0jwv2ovzeobsr.css","precedence":"next"}],["$","link","1",{"rel":"stylesheet","href":"/vk-keyboard/_next/static/chunks/07b~0kae0d8qv.css","precedence":"next"}],["$","script","script-0",{"src":"/vk-keyboard/_next/static/chunks/0c21iknjp~9g..js","async":true}]],["$","$L6",null,{"children":["$","$7",null,{"name":"Next.MetadataOutlet","children":"$@8"}]}]]}],"isPartial":false,"staleTime":300,"varyParams":null,"buildId":"TzriQzRuM1HOpXDz-qksx"}
+0:{"rsc":["$","$1","c",{"children":[["$","$L2",null,{"Component":"$3","serverProvidedParams":{"searchParams":{},"params":{},"promises":["$@4","$@5"]}}],[["$","link","0",{"rel":"stylesheet","href":"/vk-keyboard/_next/static/chunks/0jwv2ovzeobsr.css","precedence":"next"}],["$","link","1",{"rel":"stylesheet","href":"/vk-keyboard/_next/static/chunks/07b~0kae0d8qv.css","precedence":"next"}],["$","script","script-0",{"src":"/vk-keyboard/_next/static/chunks/0muygy7ah_wka.js","async":true}]],["$","$L6",null,{"children":["$","$7",null,{"name":"Next.MetadataOutlet","children":"$@8"}]}]]}],"isPartial":false,"staleTime":300,"varyParams":null,"buildId":"pmEaZet6vK06eaTRRfFCq"}
 4:{}
 5:"$0:rsc:props:children:0:props:serverProvidedParams:params"
 8:null

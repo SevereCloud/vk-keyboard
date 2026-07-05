@@ -19,7 +19,7 @@
     "@vkontakte/icons": "^3",
     "@vkontakte/vkui": "^7",
     "@vkontakte/vkui-tokens": "^4",
-    "eslint": "^9",
+    "eslint": "^10",
     "eslint-config-next": "^16",
     "eslint-config-prettier": "^10",
     "next": "^16",

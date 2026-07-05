@@ -1,20 +1,20 @@
 1:"$Sreact.fragment"
-2:I[39756,["/vk-keyboard/_next/static/chunks/0lzg7skkyx0yf.js"],"default"]
-3:I[37457,["/vk-keyboard/_next/static/chunks/0lzg7skkyx0yf.js"],"default"]
-4:I[47257,["/vk-keyboard/_next/static/chunks/0lzg7skkyx0yf.js"],"ClientPageRoot"]
-5:I[52683,["/vk-keyboard/_next/static/chunks/0lzg7skkyx0yf.js","/vk-keyboard/_next/static/chunks/0muygy7ah_wka.js"],"default"]
-8:I[97367,["/vk-keyboard/_next/static/chunks/0lzg7skkyx0yf.js"],"OutletBoundary"]
+2:I[39756,["/vk-keyboard/_next/static/chunks/1x7s_ks5qbobz.js"],"default"]
+3:I[37457,["/vk-keyboard/_next/static/chunks/1x7s_ks5qbobz.js"],"default"]
+4:I[47257,["/vk-keyboard/_next/static/chunks/1x7s_ks5qbobz.js"],"ClientPageRoot"]
+5:I[52683,["/vk-keyboard/_next/static/chunks/1x7s_ks5qbobz.js","/vk-keyboard/_next/static/chunks/1_3dd1ox__ee1.js"],"default"]
+8:I[97367,["/vk-keyboard/_next/static/chunks/1x7s_ks5qbobz.js"],"OutletBoundary"]
 9:"$Sreact.suspense"
-b:I[97367,["/vk-keyboard/_next/static/chunks/0lzg7skkyx0yf.js"],"ViewportBoundary"]
-d:I[97367,["/vk-keyboard/_next/static/chunks/0lzg7skkyx0yf.js"],"MetadataBoundary"]
-f:I[68027,["/vk-keyboard/_next/static/chunks/0lzg7skkyx0yf.js"],"default",1]
-:HL["/vk-keyboard/_next/static/chunks/0miv504~o6~eu.css","style"]
-:HL["/vk-keyboard/_next/static/chunks/0jwv2ovzeobsr.css","style"]
-:HL["/vk-keyboard/_next/static/chunks/07b~0kae0d8qv.css","style"]
-0:{"P":null,"c":["",""],"q":"","i":false,"f":[[["",{"children":["__PAGE__",{}]},"$undefined","$undefined",16],[["$","$1","c",{"children":[[["$","link","0",{"rel":"stylesheet","href":"/vk-keyboard/_next/static/chunks/0miv504~o6~eu.css","precedence":"next","crossOrigin":"$undefined","nonce":"$undefined"}],["$","script","script-0",{"src":"/vk-keyboard/_next/static/chunks/0lzg7skkyx0yf.js","async":true,"nonce":"$undefined"}]],["$","html",null,{"lang":"ru","className":"vkui","children":["$","body",null,{"children":["$","$L2",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L3",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":["404",[]],"forbidden":"$undefined","unauthorized":"$undefined"}]}]}]]}],{"children":[["$","$1","c",{"children":[["$","$L4",null,{"Component":"$5","serverProvidedParams":{"searchParams":{},"params":{},"promises":["$@6","$@7"]}}],[["$","link","0",{"rel":"stylesheet","href":"/vk-keyboard/_next/static/chunks/0jwv2ovzeobsr.css","precedence":"next","crossOrigin":"$undefined","nonce":"$undefined"}],["$","link","1",{"rel":"stylesheet","href":"/vk-keyboard/_next/static/chunks/07b~0kae0d8qv.css","precedence":"next","crossOrigin":"$undefined","nonce":"$undefined"}],["$","script","script-0",{"src":"/vk-keyboard/_next/static/chunks/0muygy7ah_wka.js","async":true,"nonce":"$undefined"}]],["$","$L8",null,{"children":["$","$9",null,{"name":"Next.MetadataOutlet","children":"$@a"}]}]]}],{},null,false,null]},null,false,null],["$","$1","h",{"children":[null,["$","$Lb",null,{"children":"$Lc"}],["$","div",null,{"hidden":true,"children":["$","$Ld",null,{"children":["$","$9",null,{"name":"Next.Metadata","children":"$Le"}]}]}],null]}],false]],"m":"$undefined","G":["$f",[["$","link","0",{"rel":"stylesheet","href":"/vk-keyboard/_next/static/chunks/0miv504~o6~eu.css","precedence":"next","crossOrigin":"$undefined","nonce":"$undefined"}]]],"S":true,"h":null,"s":"$undefined","l":"$undefined","p":"$undefined","d":"$undefined","b":"lbUVrWpdm65oiUW27EmV8"}
+b:I[97367,["/vk-keyboard/_next/static/chunks/1x7s_ks5qbobz.js"],"ViewportBoundary"]
+d:I[97367,["/vk-keyboard/_next/static/chunks/1x7s_ks5qbobz.js"],"MetadataBoundary"]
+f:I[68027,["/vk-keyboard/_next/static/chunks/1x7s_ks5qbobz.js"],"default",1]
+:HL["/vk-keyboard/_next/static/chunks/1z408owojzjxs.css","style"]
+:HL["/vk-keyboard/_next/static/chunks/1qie15d_d0i3r.css","style"]
+:HL["/vk-keyboard/_next/static/chunks/0nseh92t54ko9.css","style"]
+0:{"P":null,"c":["",""],"q":"","i":false,"f":[[["",{"children":["__PAGE__",{}]},"$undefined","$undefined",16],[["$","$1","c",{"children":[[["$","link","0",{"rel":"stylesheet","href":"/vk-keyboard/_next/static/chunks/1z408owojzjxs.css","precedence":"next","crossOrigin":"$undefined","nonce":"$undefined"}],["$","script","script-0",{"src":"/vk-keyboard/_next/static/chunks/1x7s_ks5qbobz.js","async":true,"nonce":"$undefined"}]],["$","html",null,{"lang":"ru","className":"vkui","children":["$","body",null,{"children":["$","$L2",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L3",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":["404",[]],"forbidden":"$undefined","unauthorized":"$undefined"}]}]}]]}],{"children":[["$","$1","c",{"children":[["$","$L4",null,{"Component":"$5","serverProvidedParams":{"searchParams":{},"params":{},"promises":["$@6","$@7"]}}],[["$","link","0",{"rel":"stylesheet","href":"/vk-keyboard/_next/static/chunks/1qie15d_d0i3r.css","precedence":"next","crossOrigin":"$undefined","nonce":"$undefined"}],["$","link","1",{"rel":"stylesheet","href":"/vk-keyboard/_next/static/chunks/0nseh92t54ko9.css","precedence":"next","crossOrigin":"$undefined","nonce":"$undefined"}],["$","script","script-0",{"src":"/vk-keyboard/_next/static/chunks/1_3dd1ox__ee1.js","async":true,"nonce":"$undefined"}]],["$","$L8",null,{"children":["$","$9",null,{"name":"Next.MetadataOutlet","children":"$@a"}]}]]}],{},null,false,null]},null,false,null],["$","$1","h",{"children":[null,["$","$Lb",null,{"children":"$Lc"}],["$","div",null,{"hidden":true,"children":["$","$Ld",null,{"children":["$","$9",null,{"name":"Next.Metadata","children":"$Le"}]}]}],null]}],false]],"m":"$undefined","G":["$f",[["$","link","0",{"rel":"stylesheet","href":"/vk-keyboard/_next/static/chunks/1z408owojzjxs.css","precedence":"next","crossOrigin":"$undefined","nonce":"$undefined"}]]],"S":true,"h":null,"s":"$undefined","l":"$undefined","p":"$undefined","d":"$undefined","b":"X5m09HI2actFs07-sPDL3"}
 6:{}
 7:"$0:f:0:1:1:children:0:props:children:0:props:serverProvidedParams:params"
 c:[["$","meta","0",{"charSet":"utf-8"}],["$","meta","1",{"name":"viewport","content":"width=device-width, initial-scale=1"}]]
-10:I[27201,["/vk-keyboard/_next/static/chunks/0lzg7skkyx0yf.js"],"IconMark"]
+10:I[27201,["/vk-keyboard/_next/static/chunks/1x7s_ks5qbobz.js"],"IconMark"]
 a:null
-e:[["$","title","0",{"children":"Генератор клавиатуры"}],["$","meta","1",{"name":"description","content":"Генератор клавиатуры ботов для ВКонтакте"}],["$","link","2",{"rel":"icon","href":"/favicon.ico?favicon.0x3dzn~oxb6tn.ico","sizes":"256x256","type":"image/x-icon"}],["$","$L10","3",{}]]
+e:[["$","title","0",{"children":"Генератор клавиатуры"}],["$","meta","1",{"name":"description","content":"Генератор клавиатуры ботов для ВКонтакте"}],["$","link","2",{"rel":"icon","href":"/favicon.ico?favicon.2vob68tjqpejf.ico","sizes":"256x256","type":"image/x-icon"}],["$","$L10","3",{}]]

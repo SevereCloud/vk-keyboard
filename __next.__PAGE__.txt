@@ -1,11 +1,11 @@
 1:"$Sreact.fragment"
-2:I[47257,["/vk-keyboard/_next/static/chunks/0lzg7skkyx0yf.js"],"ClientPageRoot"]
-3:I[52683,["/vk-keyboard/_next/static/chunks/0lzg7skkyx0yf.js","/vk-keyboard/_next/static/chunks/0muygy7ah_wka.js"],"default"]
-6:I[97367,["/vk-keyboard/_next/static/chunks/0lzg7skkyx0yf.js"],"OutletBoundary"]
+2:I[47257,["/vk-keyboard/_next/static/chunks/1x7s_ks5qbobz.js"],"ClientPageRoot"]
+3:I[52683,["/vk-keyboard/_next/static/chunks/1x7s_ks5qbobz.js","/vk-keyboard/_next/static/chunks/1_3dd1ox__ee1.js"],"default"]
+6:I[97367,["/vk-keyboard/_next/static/chunks/1x7s_ks5qbobz.js"],"OutletBoundary"]
 7:"$Sreact.suspense"
-:HL["/vk-keyboard/_next/static/chunks/0jwv2ovzeobsr.css","style"]
-:HL["/vk-keyboard/_next/static/chunks/07b~0kae0d8qv.css","style"]
-0:{"rsc":["$","$1","c",{"children":[["$","$L2",null,{"Component":"$3","serverProvidedParams":{"searchParams":{},"params":{},"promises":["$@4","$@5"]}}],[["$","link","0",{"rel":"stylesheet","href":"/vk-keyboard/_next/static/chunks/0jwv2ovzeobsr.css","precedence":"next"}],["$","link","1",{"rel":"stylesheet","href":"/vk-keyboard/_next/static/chunks/07b~0kae0d8qv.css","precedence":"next"}],["$","script","script-0",{"src":"/vk-keyboard/_next/static/chunks/0muygy7ah_wka.js","async":true}]],["$","$L6",null,{"children":["$","$7",null,{"name":"Next.MetadataOutlet","children":"$@8"}]}]]}],"isPartial":false,"staleTime":300,"varyParams":null,"buildId":"lbUVrWpdm65oiUW27EmV8"}
+:HL["/vk-keyboard/_next/static/chunks/1qie15d_d0i3r.css","style"]
+:HL["/vk-keyboard/_next/static/chunks/0nseh92t54ko9.css","style"]
+0:{"rsc":["$","$1","c",{"children":[["$","$L2",null,{"Component":"$3","serverProvidedParams":{"searchParams":{},"params":{},"promises":["$@4","$@5"]}}],[["$","link","0",{"rel":"stylesheet","href":"/vk-keyboard/_next/static/chunks/1qie15d_d0i3r.css","precedence":"next"}],["$","link","1",{"rel":"stylesheet","href":"/vk-keyboard/_next/static/chunks/0nseh92t54ko9.css","precedence":"next"}],["$","script","script-0",{"src":"/vk-keyboard/_next/static/chunks/1_3dd1ox__ee1.js","async":true}]],["$","$L6",null,{"children":["$","$7",null,{"name":"Next.MetadataOutlet","children":"$@8"}]}]]}],"isPartial":false,"staleTime":300,"varyParams":null,"buildId":"X5m09HI2actFs07-sPDL3"}
 4:{}
 5:"$0:rsc:props:children:0:props:serverProvidedParams:params"
 8:null
